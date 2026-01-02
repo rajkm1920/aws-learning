@@ -1,0 +1,68 @@
+# Add Docker's official GPG key:
+    2  sudo apt update
+    3  sudo apt install ca-certificates curl
+    4  sudo install -m 0755 -d /etc/apt/keyrings
+    5  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    6  sudo chmod a+r /etc/apt/keyrings/docker.asc
+    7  # Add the repository to Apt sources:
+    8  sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+    9  Types: deb
+   10  URIs: https://download.docker.com/linux/ubuntu
+   11  Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+   12  Components: stable
+   13  Signed-By: /etc/apt/keyrings/docker.asc
+   14  EOF
+   15  sudo apt update
+   16  sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   17  docker --version
+   18  docker image
+   19  docker images
+   20  sudo docker images
+   21  sudo groupadd docker
+   22  sudo usermod -aG docker $USER
+   23  docker images
+   24  docker ps -a
+   25  systemctl status docker
+   26  docker pull python:3.10.19-slim-trixie
+   27  docker tag python:3.10.19-slim-trixie spadeinfotechrahul/ct-10:py-3.10
+   28  docker images
+   29  docker login
+   30  docker push spadeinfotechrahul/ct-10:py-3.10
+   33  git clone https://github.com/projects-ct10/live-classes-p10.gitd
+   
+   
+   42  docker build .
+   43  docker images
+   44  df -hT
+   45  docker build . --tag nginx:v1
+   46  docker images
+   47  docker inspect 6acccd1e6847
+   48  docker run -it -d --name app-container -p 8081:80 nginx:v1
+   49  docker ps
+   50  history
+   51  docker run -it -d --name app-container -p 8081:80 nginx:v1
+   52  docker inspect 6acccd1e6847
+   53  docker run -it -d --name app-container -p 8081:80 nginx:v1
+   54  docker ps -a
+   55  docker restart app-container
+   56  docker ps -a
+   57  ipconfig
+   58  docker restart app-container
+   59  ls -l
+   60  git clone https://github.com/rajkm1920/aws-learning.git
+   61  git pull
+   62  cd aws-learning/
+   63  git pull
+   64  ls -l
+   65  cd doc
+   66  cd docker/
+   67  ls -l
+   68  cat index.nginx-debian.html 
+   69  history
+   70  docker build .
+   71  docker images
+   72  docker build . --tag nginx:custom-v2
+   73  docker run -it -d --name app-container -p 8082:80 nginx
+   74  docker run -it -d --name app-container1 -p 8082:80 nginx:custom-v2
+   75  docker ps
+   76  history
